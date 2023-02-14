@@ -7,14 +7,14 @@ def obternome():
             return x
 
 def criarFicheiro():
-    filename = input("Insira o nome do ficheiro > ")
+    filename = input("Insert the filename > ")
     filename += ".txt"
     file = open(filename, "x")
 
 def inserirQuote():
     filename = obternome()
     file = open(filename, "a")
-    quote = input("Insira uma Quote > ")
+    quote = input("Insert a Quote > ")
     quote 
     file.write(quote + "\n")
     file.close
@@ -35,13 +35,15 @@ def getNumLines():
     return i
 
 
-opcao = input("Insira a Opção desejada:\n0-Criar novo ficheiro\n1-Inserir Quote\n2-Ver uma quote\n3-Sair\n> ")
+opcao = input("Chose a option:\n0-Create a new file\n1-Insert a Quote\n2-Generate a quote\n3-Exit\n> ")
 if(opcao == "0"):
     criarFicheiro()
 elif(opcao == "1"):
     inserirQuote()
 elif(opcao == "2"):
     verQuote()
-else:
+elif(opcao == "3"):
     exit()
+else:
+    print("Insert a valid Option")
     
